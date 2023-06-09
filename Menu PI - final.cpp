@@ -50,7 +50,7 @@ void registerProduct() {
 			line++;
 		}
 		
-    	printf("This product code is: %d", line);
+    	printf("This product code is: %d\n", line);
 	    printf("\nEnter product name: ");
 		scanf(" %[^\n]s", name);
 	    printf("\nEnter quantity in stock: ");
@@ -58,7 +58,7 @@ void registerProduct() {
 	    printf("\nEnter supplier name: ");
 	    scanf(" %[^\n]s", supplier);
 	    
-	    fprintf(fp,"\n%d,%s,%s,%s", line, name, amount, supplier);
+	    fprintf(fp,"%d,%s,%s,%s\n", line, name, amount, supplier);
 	 
 	    printf("\nNew product added to stock!\n");
 	}
@@ -110,7 +110,7 @@ void editProduct() {
 				gets(fields[2]);
 			}
 			
-			printf("Supplier: %s \nChange (y/n)?",fields[3]);
+			printf("Supplier: %sChange (y/n)?",fields[3]);
 			scanf(" %c",&ans);
 			if(ans == 'y'){
 				printf("Updated supplier: ");
